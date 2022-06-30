@@ -7,3 +7,10 @@
 class Solution:
     def minMoves(self, nums: List[int]) -> int:
         return sum(nums) - len(nums) * min(nums)
+
+        # Solution 2
+        mi = min(nums)
+        ans = 0
+        for x in nums:
+            ans += x - mi
+        return ans
